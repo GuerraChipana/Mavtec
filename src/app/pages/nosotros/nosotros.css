@@ -1,0 +1,175 @@
+.nosotros {
+  background: linear-gradient(135deg, #0a192f, #122240);
+  color: #fff;
+  padding: 80px 10%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.nosotros-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* QUIÉNES SOMOS */
+.quienes-somos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.quienes-somos .texto {
+  max-width: 600px;
+}
+
+.quienes-somos .texto h2 {
+  font-size: 2.8rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.7);
+  font-weight: 700;
+}
+
+.quienes-somos .texto p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #cfd8e3;
+  letter-spacing: 0.3px;
+}
+
+.quienes-somos .imagen img {
+  width: 420px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.quienes-somos .imagen img:hover {
+  transform: scale(1.05);
+}
+
+/* MISIÓN Y VISIÓN */
+.mision,
+.vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  margin: 120px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.mision {
+  animation-delay: 0.3s;
+}
+
+.vision {
+  animation-delay: 0.7s;
+}
+
+/* ICONOS */
+.mision-icono,
+.vision-icono {
+  font-size: 3.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+  flex-shrink: 0;
+  transform: scale(0);
+  animation: iconPop 0.6s ease forwards;
+}
+
+.mision-icono {
+  animation-delay: 0.5s;
+}
+
+.vision-icono {
+  animation-delay: 1s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconPop {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* TEXTO DE MISIÓN Y VISIÓN */
+.mision-texto,
+.vision-texto {
+  max-width: 550px;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: textFade 0.8s ease forwards;
+}
+
+.mision-texto {
+  animation-delay: 0.9s;
+}
+
+.vision-texto {
+  animation-delay: 1.2s;
+}
+
+@keyframes textFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mision-texto h3,
+.vision-texto h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.mision-texto p,
+.vision-texto p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #cfd8e3;
+  letter-spacing: 0.3px;
+}
+
+/* HOVER ICONOS */
+.mision-icono:hover,
+.vision-icono:hover {
+  transform: scale(1.25) rotate(10deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .quienes-somos {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .mision,
+  .vision {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .mision-icono,
+  .vision-icono {
+    order: -1;
+  }
+}

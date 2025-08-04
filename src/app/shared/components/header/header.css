@@ -1,0 +1,49 @@
+.header {
+  background-color: #002345;
+  color: white;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.logo-area-link {
+  display: flex; /* Para que div logo-area mantenga flex */
+  align-items: center;
+  text-decoration: none; /* Quita el subrayado típico de enlaces */
+  color: inherit; /* Que herede el color del texto */
+  cursor: pointer;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.company-name {
+  font-size: 2rem;
+  color: #1781eb;
+  margin-left: -10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
